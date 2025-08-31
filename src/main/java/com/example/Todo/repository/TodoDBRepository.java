@@ -12,5 +12,14 @@ public class TodoDBRepository implements TodoRepository {
         return jpaTodoRepository.save(todo);
     }
 
+    @Override
+    public Todo updateTodo(Todo todo) {
+        return jpaTodoRepository.save(todo);
+    }
+
+    @Override
+    public Todo getTodoById(Long id) {
+        return jpaTodoRepository.findById(id);
+    }
 }
 

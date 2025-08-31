@@ -5,5 +5,5 @@ import com.example.Todo.models.Todo;
 public interface TodoRepository {
     Todo addTodo(Todo todo);
     Todo updateTodo(Todo todo);
-    Todo findById(Long id);
+    Todo getTodoById(Long id);
 }
