@@ -20,7 +20,10 @@ public class TodoService {
     }
 
     public Todo updateTodo(Long id, Todo todo) {
-        Todo Todo = todoRepository.getTodoById(id);
+        Todo targetTodo = todoRepository.getTodoById(id);
+        if (targetTodo == null) {
+            throw new RuntimeException("Todo not found with id " + id);
+        }
         return todoRepository.updateTodo(todo);
     }
 

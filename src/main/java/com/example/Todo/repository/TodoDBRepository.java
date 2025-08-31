@@ -2,9 +2,11 @@ package com.example.Todo.repository;
 
 import com.example.Todo.models.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class TodoDBRepository implements TodoRepository {
     @Autowired
     private JpaTodoRepository jpaTodoRepository;
