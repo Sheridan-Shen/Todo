@@ -42,5 +42,11 @@ public class TodoController {
     public void deleteTodoById(@PathVariable Long id) {
         todoService.deleteTodoById(id);
     }
+
+    // 更新Todo的部分属性（PATCH方法）
+    @PatchMapping("/{id}")
+    public Todo patchTodo(@PathVariable Long id, @RequestBody Todo todoInfo) {
+        return todoService.updateTodoInfo(id, todoInfo);
+    }
 }
 
