@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.Todo.service.TodoService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
@@ -21,6 +23,18 @@ public class TodoController {
     @PutMapping("/{id}")
     public Todo updateTodo(@PathVariable Long id, @RequestBody Todo todo) {
         return todoService.updateTodo(id, todo);
+    }
+
+    // 按id查找todo
+    @GetMapping("/{id}")
+    public Todo getTodoById(@PathVariable Long id) {
+        return todoService.getTodoById(id);
+    }
+
+    // 查找所有todo
+    @GetMapping
+    public List<Todo> getAllTodos() {
+        return todoService.getAllTodos();
     }
 }
 

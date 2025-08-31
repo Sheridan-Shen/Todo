@@ -3,6 +3,8 @@ package com.example.Todo.repository;
 import com.example.Todo.models.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 public class TodoDBRepository implements TodoRepository {
     @Autowired
     private JpaTodoRepository jpaTodoRepository;
@@ -20,6 +22,11 @@ public class TodoDBRepository implements TodoRepository {
     @Override
     public Todo getTodoById(Long id) {
         return jpaTodoRepository.getTodoById(id);
+    }
+
+    @Override
+    public List<Todo> getTodos() {
+        return jpaTodoRepository.findAll();
     }
 }
 
