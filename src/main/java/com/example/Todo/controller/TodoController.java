@@ -16,5 +16,11 @@ public class TodoController {
     public Todo createTodo(@RequestBody Todo todo) {
         return todoService.createTodo(todo);
     }
+
+    // 更新一个todo（PUT方法）
+    @PutMapping("/{id}")
+    public Todo updateTodo(@PathVariable Long id, @RequestBody Todo todo) {
+        return todoService.updateTodo(id, todo);
+    }
 }
 
