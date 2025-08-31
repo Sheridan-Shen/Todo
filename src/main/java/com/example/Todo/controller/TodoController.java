@@ -36,5 +36,11 @@ public class TodoController {
     public List<Todo> getAllTodos() {
         return todoService.getAllTodos();
     }
+
+    // 根据id删除todo
+    @DeleteMapping("/{id}")
+    public void deleteTodoById(@PathVariable Long id) {
+        todoService.deleteTodoById(id);
+    }
 }
 

@@ -31,4 +31,11 @@ public class TodoService {
     public List<Todo> getAllTodos() {
         return todoRepository.getTodos();
     }
+
+    public void deleteTodoById(Long id) {
+        Todo todo = todoRepository.getTodoById(id);
+        if (todo != null) {
+            todoRepository.deleteTodo(todo);
+        }
+    }
 }

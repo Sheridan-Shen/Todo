@@ -28,5 +28,10 @@ public class TodoDBRepository implements TodoRepository {
     public List<Todo> getTodos() {
         return jpaTodoRepository.findAll();
     }
+
+    @Override
+    public void deleteTodo(Todo todo) {
+        jpaTodoRepository.delete(todo);
+    }
 }
 

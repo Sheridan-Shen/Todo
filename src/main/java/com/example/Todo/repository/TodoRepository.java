@@ -9,4 +9,5 @@ public interface TodoRepository {
     Todo updateTodo(Todo todo);
     Todo getTodoById(Long id);
     List<Todo> getTodos();
+    void deleteTodo(Todo todo);
 }
