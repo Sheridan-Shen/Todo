@@ -18,7 +18,7 @@ public class TodoService {
     }
 
     public Todo updateTodo(Long id, Todo todo) {
-        Todo optionalTodo = todoRepository.findById(id);
+        Todo Todo = todoRepository.getTodoById(id);
         return todoRepository.updateTodo(todo);
     }
 }

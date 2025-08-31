@@ -19,7 +19,7 @@ public class TodoDBRepository implements TodoRepository {
 
     @Override
     public Todo getTodoById(Long id) {
-        return jpaTodoRepository.findById(id);
+        return jpaTodoRepository.getTodoById(id);
     }
 }
 

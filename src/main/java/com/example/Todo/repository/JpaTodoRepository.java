@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 
 public interface JpaTodoRepository extends JpaRepository<Todo, Long>, JpaSpecificationExecutor<Todo> {
-    Todo findById(long id);
+    public Todo getTodoById(Long id);
 }
